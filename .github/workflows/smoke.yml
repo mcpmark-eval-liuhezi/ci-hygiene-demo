@@ -1,0 +1,14 @@
+name: Smoke
+
+on:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Echo smoke signal
+        run: echo "CI_SMOKE_OK"
